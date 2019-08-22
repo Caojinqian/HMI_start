@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="124,169,0,0" VerticalAlignment="Top" Width="70" Height="39"/>
+        <Button Content="OP01" HorizontalAlignment="Left" Margin="113,147,0,0" VerticalAlignment="Top" Width="70" Height="39" Click="Button_OP01" RenderTransformOrigin="-1.613,-1.957"/>
+        <Button Content="入库端" HorizontalAlignment="Left" Margin="296,147,0,0" VerticalAlignment="Top" Width="70" Height="39" Click="Button_入库端" RenderTransformOrigin="-1.613,-1.957"/>
+        <Button Content="出库端" HorizontalAlignment="Left" Margin="486,147,0,0" VerticalAlignment="Top" Width="70" Height="39" Click="Button_出库端" RenderTransformOrigin="-1.613,-1.957"/>
 
     </Grid>
 </Window>
