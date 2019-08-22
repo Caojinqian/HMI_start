@@ -5,11 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="HMI画面选择" Height="450" Width="800" ShowInTaskbar="False">
     <Grid>
-        <Button Content="OP01" HorizontalAlignment="Left" Margin="113,147,0,0" VerticalAlignment="Top" Width="70" Height="39" Click="Button_OP01" RenderTransformOrigin="-1.613,-1.957"/>
-        <Button Content="入库端" HorizontalAlignment="Left" Margin="296,147,0,0" VerticalAlignment="Top" Width="70" Height="39" Click="Button_入库端" RenderTransformOrigin="-1.613,-1.957"/>
-        <Button Content="出库端" HorizontalAlignment="Left" Margin="486,147,0,0" VerticalAlignment="Top" Width="70" Height="39" Click="Button_出库端" RenderTransformOrigin="-1.613,-1.957"/>
+        <Button Content="OP01" HorizontalAlignment="Left" Margin="113,147,0,0" VerticalAlignment="Top" Width="114" Height="79" Click="Button_OP01" RenderTransformOrigin="-1.613,-1.957"/>
+        <Button Content="入库端" HorizontalAlignment="Left" Margin="296,147,0,0" VerticalAlignment="Top" Width="114" Height="76" Click="Button_入库端" RenderTransformOrigin="-1.613,-1.957"/>
+        <Button Content="出库端" HorizontalAlignment="Left" Margin="486,147,0,0" VerticalAlignment="Top" Width="114" Height="76" Click="Button_出库端" RenderTransformOrigin="-1.613,-1.957"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="469,313,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image Margin="0,0,575,347" Source="f4b58b0c5c5a25b2b773226c18467a5.png" Stretch="Fill"/>
+        <TextBox HorizontalAlignment="Left" Height="18" Margin="10,368,0,0" TextWrapping="Wrap" Text="电气部出品 V1.0" VerticalAlignment="Top" Width="115"/>
+        <TextBox HorizontalAlignment="Left" Height="18" Margin="10,391,0,0" TextWrapping="Wrap" Text="时间： 20190822" VerticalAlignment="Top" Width="115"/>
+        <Image HorizontalAlignment="Left" Height="66" Margin="175,57,0,0" VerticalAlignment="Top" Width="146"/>
 
     </Grid>
 </Window>
