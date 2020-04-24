@@ -12,7 +12,7 @@
         <Button Content="画面三" HorizontalAlignment="Left" Margin="486,147,0,0" VerticalAlignment="Top" Width="114" Height="76" Click="Button_画面三" RenderTransformOrigin="-1.613,-1.957"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="469,313,0,0" VerticalAlignment="Top" Width="100"/>
         <Image Margin="565,341,10,6" Source="f4b58b0c5c5a25b2b773226c18467a5.png" Stretch="Fill"/>
-        <TextBox HorizontalAlignment="Left" Height="18" Margin="10,368,0,0" TextWrapping="Wrap" Text="电气部出品 V1.0" VerticalAlignment="Top" Width="115"/>
+        <TextBox HorizontalAlignment="Left" Height="18" Margin="10,368,0,0" TextWrapping="Wrap" Text="电气部出品 V1.1" VerticalAlignment="Top" Width="115"/>
         <TextBox HorizontalAlignment="Left" Height="18" Margin="10,391,0,0" TextWrapping="Wrap" Text="时间： 20200424" VerticalAlignment="Top" Width="115"/>
         <Image HorizontalAlignment="Left" Height="66" Margin="175,57,0,0" VerticalAlignment="Top" Width="146"/>
 
