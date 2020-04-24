@@ -25,14 +25,33 @@ namespace WpfApp1
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private bool closeProc(string ProcName) //关闭相应的程序进程
         {
+            bool result = false;
+            System.Collections.ArrayList procList = new System.Collections.ArrayList();
+            string tempName = "";
 
+            foreach (System.Diagnostics.Process thisProc in System.Diagnostics.Process.GetProcesses())
+            {
+                tempName = thisProc.ProcessName;
+                procList.Add(tempName);
+                if (tempName == ProcName)
+                {
+                    if (!thisProc.CloseMainWindow())
+                        thisProc.Kill(); //当发送关闭窗口命令无效时强行结束进程     
+                    result = true;
+                }
+            }
+            return result;
         }
+
+
 
         private void Button_OP01(object sender, RoutedEventArgs e)
         {
- 
+
+            string path4 = @"HmiRTm";
+            closeProc(path4);
             string path1 = @"D:\test\OP01\HmiRTm.ini";
             string path2 = @"C:\Program Files (x86)\Siemens\Automation\WinCC RT Advanced\HmiRTm.ini";
             FileInfo fi1 = new FileInfo(path1);
@@ -68,6 +87,9 @@ namespace WpfApp1
 
         private void Button_入库端(object sender, RoutedEventArgs e)
         {
+            string path4 = @"HmiRTm";
+            closeProc(path4);
+
             string path1 = @"D:\test\OP02\HmiRTm.ini";
             string path2 = @"C:\Program Files (x86)\Siemens\Automation\WinCC RT Advanced\HmiRTm.ini";
             FileInfo fi1 = new FileInfo(path1);
@@ -100,6 +122,8 @@ namespace WpfApp1
 
         private void Button_出库端(object sender, RoutedEventArgs e)
         {
+            string path4 = @"HmiRTm";
+            closeProc(path4);
             string path1 = @"D:\test\OP03\HmiRTm.ini";
             string path2 = @"C:\Program Files (x86)\Siemens\Automation\WinCC RT Advanced\HmiRTm.ini";
             FileInfo fi1 = new FileInfo(path1);
