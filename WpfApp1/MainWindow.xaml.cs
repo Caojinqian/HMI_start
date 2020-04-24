@@ -53,7 +53,7 @@ namespace WpfApp1
             string path4 = @"HmiRTm";  //需要关闭进程的名字，如果不知道进程的名称，可以通过closeProc里面的list去查找
             closeProc(path4);  //关闭进程
             System.Threading.Thread.Sleep(1000);
-            string path1 = @"D:\HmiSelect\OP01\HmiRTm.ini";
+            string path1 = @"D:\HmiSelect\HMI01\HmiRTm.ini";
             string path2 = @"C:\Program Files (x86)\Siemens\Automation\WinCC RT Advanced\HmiRTm.ini";
             FileInfo fi1 = new FileInfo(path1);
             FileInfo fi2 = new FileInfo(path2);
@@ -91,7 +91,7 @@ namespace WpfApp1
             string path4 = @"HmiRTm";
             closeProc(path4);
             System.Threading.Thread.Sleep(1000);
-            string path1 = @"D:\HmiSelect\OP02\HmiRTm.ini";
+            string path1 = @"D:\HmiSelect\HMI02\HmiRTm.ini";
             string path2 = @"C:\Program Files (x86)\Siemens\Automation\WinCC RT Advanced\HmiRTm.ini";
             FileInfo fi1 = new FileInfo(path1);
             FileInfo fi2 = new FileInfo(path2);
@@ -126,7 +126,7 @@ namespace WpfApp1
             string path4 = @"HmiRTm";
             closeProc(path4);
             System.Threading.Thread.Sleep(1000);
-            string path1 = @"D:\HmiSelect\OP03\HmiRTm.ini";
+            string path1 = @"D:\HmiSelect\HMI03\HmiRTm.ini";
             string path2 = @"C:\Program Files (x86)\Siemens\Automation\WinCC RT Advanced\HmiRTm.ini";
             FileInfo fi1 = new FileInfo(path1);
             FileInfo fi2 = new FileInfo(path2);
