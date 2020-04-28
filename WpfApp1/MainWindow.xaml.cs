@@ -27,6 +27,7 @@ namespace WpfApp1
         private string Disk1 = ConfigurationManager.AppSettings["终端1组态文件位置"].ToString();
         private string Disk2 = ConfigurationManager.AppSettings["终端2组态文件位置"].ToString();
         private string Disk3 = ConfigurationManager.AppSettings["终端3组态文件位置"].ToString();
+      
         public MainWindow()
         {
             InitializeComponent();
@@ -62,6 +63,7 @@ namespace WpfApp1
             System.Threading.Thread.Sleep(1000);
             string path1 = Disk1;
             string path2 = pathIni;
+            readIniFile();
             FileInfo fi1 = new FileInfo(path1);
             FileInfo fi2 = new FileInfo(path2);
 
@@ -164,7 +166,26 @@ namespace WpfApp1
             string path3 = pathExe;
             System.Diagnostics.Process.Start(path3);
         }
+        private string local;
+        private void readIniFile()
+        {
+            if (File.Exists(pathIni))
+            {
+                local= Enfon画面选择.IniFileHelper.GetValue("configuration", "LoadConfigfile", pathIni);
+            
+                MessageBox.Show("local");
+                MessageBox.Show("读取文档成功");
+            }
+            else
+            {
+                MessageBox.Show("文件加载失败，请确认是否存在此文件：" + pathIni);
+            }
+        }
 
-       
+
+
+
+
+
     }
 }
