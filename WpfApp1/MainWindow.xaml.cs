@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using System.Diagnostics;
+using System.Configuration;
 namespace WpfApp1
 {
     /// <summary>
@@ -20,6 +22,11 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string pathIni = ConfigurationManager.AppSettings["WinCCIniPath"].ToString();
+        private string pathExe = ConfigurationManager.AppSettings["WinCCExePath"].ToString();
+        private string Disk1 = ConfigurationManager.AppSettings["终端1组态文件位置"].ToString();
+        private string Disk2 = ConfigurationManager.AppSettings["终端2组态文件位置"].ToString();
+        private string Disk3 = ConfigurationManager.AppSettings["终端3组态文件位置"].ToString();
         public MainWindow()
         {
             InitializeComponent();
@@ -53,8 +60,8 @@ namespace WpfApp1
             string path4 = @"HmiRTm";  //需要关闭进程的名字，如果不知道进程的名称，可以通过closeProc里面的list去查找
             closeProc(path4);  //关闭进程
             System.Threading.Thread.Sleep(1000);
-            string path1 = @"D:\HmiSelect\HMI01\HmiRTm.ini";
-            string path2 = @"C:\Program Files (x86)\Siemens\Automation\WinCC RT Advanced\HmiRTm.ini";
+            string path1 = Disk1;
+            string path2 = pathIni;
             FileInfo fi1 = new FileInfo(path1);
             FileInfo fi2 = new FileInfo(path2);
 
@@ -81,7 +88,7 @@ namespace WpfApp1
 
 
 
-            string path3 = @"C:\Program Files (x86)\Siemens\Automation\WinCC RT Advanced\HmiRTM.exe";
+            string path3 = pathExe;
             System.Diagnostics.Process.Start(path3);
 
         }
@@ -91,8 +98,8 @@ namespace WpfApp1
             string path4 = @"HmiRTm";
             closeProc(path4);
             System.Threading.Thread.Sleep(1000);
-            string path1 = @"D:\HmiSelect\HMI02\HmiRTm.ini";
-            string path2 = @"C:\Program Files (x86)\Siemens\Automation\WinCC RT Advanced\HmiRTm.ini";
+            string path1 = Disk2;
+            string path2 = pathIni;
             FileInfo fi1 = new FileInfo(path1);
             FileInfo fi2 = new FileInfo(path2);
 
@@ -117,7 +124,7 @@ namespace WpfApp1
                 Console.WriteLine(ioex.Message);
             }
        
-            string path3 = @"C:\Program Files (x86)\Siemens\Automation\WinCC RT Advanced\HmiRTM.exe";
+            string path3 = pathExe;
             System.Diagnostics.Process.Start(path3);
         }
 
@@ -126,8 +133,8 @@ namespace WpfApp1
             string path4 = @"HmiRTm";
             closeProc(path4);
             System.Threading.Thread.Sleep(1000);
-            string path1 = @"D:\HmiSelect\HMI03\HmiRTm.ini";
-            string path2 = @"C:\Program Files (x86)\Siemens\Automation\WinCC RT Advanced\HmiRTm.ini";
+            string path1 = Disk3;
+            string path2 = pathIni;
             FileInfo fi1 = new FileInfo(path1);
             FileInfo fi2 = new FileInfo(path2);
 
@@ -154,7 +161,7 @@ namespace WpfApp1
 
 
 
-            string path3 = @"C:\Program Files (x86)\Siemens\Automation\WinCC RT Advanced\HmiRTM.exe";
+            string path3 = pathExe;
             System.Diagnostics.Process.Start(path3);
         }
 
