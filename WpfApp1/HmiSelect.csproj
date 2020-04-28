@@ -71,6 +71,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="IniFileHelper.cs" />
     <Compile Include="mainWindow.xaml.cs">
       <DependentUpon>mainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
